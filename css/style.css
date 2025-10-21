@@ -27,14 +27,14 @@
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     
-    /* Spacing */
+    /* Spacing - Kompakter */
     --space-xs: 0.5rem;
-    --space-sm: 1rem;
-    --space-md: 1.5rem;
-    --space-lg: 2rem;
-    --space-xl: 3rem;
-    --space-2xl: 4rem;
-    --space-3xl: 6rem;
+    --space-sm: 0.75rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 2.5rem;
+    --space-3xl: 3.5rem;
 }
 
 [data-theme="dark"] {
@@ -202,10 +202,10 @@ p {
     font-size: 0.875rem;
 }
 
-/* Hero Section - MNTS Style */
+/* Hero Section - MNTS Style Kompakter */
 .hero {
-    padding: var(--space-3xl) 0 var(--space-2xl);
-    min-height: 90vh;
+    padding: var(--space-2xl) 0 var(--space-xl);
+    min-height: 70vh;
     display: flex;
     align-items: center;
 }
@@ -257,40 +257,61 @@ p {
     box-shadow: var(--shadow-hover);
 }
 
-/* Buttons - MNTS Style */
+/* Buttons - MNTS Style Improved */
 .btn {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 12px 24px;
-    border-radius: 6px;
+    padding: 14px 28px;
+    border-radius: 25px;
     text-decoration: none;
     font-weight: var(--font-weight-medium);
     font-size: 0.95rem;
     text-align: center;
-    transition: all 0.2s ease;
-    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
     cursor: pointer;
     white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border-color: var(--text-primary);
+}
+
+[data-theme="dark"] .btn-primary {
+    background: var(--bg-primary);
+    color: var(--text-primary);  
+    border-color: var(--text-primary);
 }
 
 .btn-primary:hover {
-    background: #0052cc;
-    border-color: #0052cc;
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-md);
+    background: var(--text-primary);
+    color: var(--bg-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="dark"] .btn-primary:hover {
+    background: var(--text-primary);
+    color: var(--bg-primary);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
 }
 
 .btn-secondary {
     background: transparent;
-    color: var(--text-primary);
-    border-color: var(--border-color);
+    color: var(--text-accent);
+    border-color: var(--text-accent);
 }
 
 .btn-secondary:hover {
-    background: var(--bg-secondary);
-    border-color: var(--text-primary);
-    transform: translateY(-1px);
+    background: var(--text-accent);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 102, 255, 0.25);
 }
 
 .btn-link {
@@ -300,10 +321,12 @@ p {
     padding: 0;
     text-decoration: underline;
     text-underline-offset: 4px;
+    border-radius: 0;
 }
 
 .btn-link:hover {
     text-decoration: none;
+    transform: none;
 }
 
 .btn-outline {
@@ -317,9 +340,9 @@ p {
     color: var(--text-accent);
 }
 
-/* Services Section - MNTS Style */
+/* Services Section - MNTS Style Kompakter */
 .services-section {
-    padding: var(--space-3xl) 0;
+    padding: var(--space-2xl) 0;
     background: var(--bg-primary);
 }
 
@@ -374,9 +397,9 @@ p {
     line-height: 1.6;
 }
 
-/* Featured Work Section - MNTS Style */
+/* Featured Work Section - MNTS Style Kompakter */
 .featured-work {
-    padding: var(--space-3xl) 0;
+    padding: var(--space-2xl) 0;
     background: var(--bg-secondary);
 }
 
@@ -472,7 +495,7 @@ p {
 
 /* Stats Section */
 .stats {
-    padding: 80px 0;
+    padding: 40px 0;
     background: #2563eb;
     color: white;
 }
@@ -498,9 +521,9 @@ p {
     opacity: 0.9;
 }
 
-/* Testimonials Section - MNTS Style */
+/* Testimonials Section - MNTS Style Kompakter */
 .testimonials {
-    padding: var(--space-3xl) 0;
+    padding: var(--space-2xl) 0;
     background: var(--bg-primary);
 }
 
@@ -564,9 +587,9 @@ p {
     opacity: 0.7;
 }
 
-/* About Preview Section - MNTS Style */
+/* About Preview Section - MNTS Style Kompakter */
 .about-preview {
-    padding: var(--space-3xl) 0;
+    padding: var(--space-2xl) 0;
     background: var(--bg-secondary);
 }
 
@@ -590,9 +613,9 @@ p {
     margin-bottom: var(--space-xl);
 }
 
-/* CTA Section - MNTS Style */
+/* CTA Section - MNTS Style Kompakter */
 .cta-section {
-    padding: var(--space-3xl) 0;
+    padding: var(--space-2xl) 0;
     background: var(--bg-primary);
     text-align: center;
 }
@@ -633,12 +656,12 @@ p {
     opacity: 0.7;
 }
 
-/* Footer - MNTS Style Improved */
+/* Footer - MNTS Style Improved Kompakter */
 .footer {
     background: var(--bg-primary);
     border-top: 1px solid var(--border-color);
-    padding: var(--space-3xl) 0 var(--space-xl);
-    margin-top: var(--space-3xl);
+    padding: var(--space-2xl) 0 var(--space-lg);
+    margin-top: var(--space-2xl);
 }
 
 .footer-content {
@@ -650,8 +673,8 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: var(--space-2xl);
-    padding-bottom: var(--space-2xl);
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-lg);
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -769,13 +792,13 @@ p {
     text-align: center;
 }
 
-/* Work Page Styles - MNTS Style */
+/* Work Page Styles - MNTS Style Kompakter */
 .main-content {
     padding-top: 80px;
 }
 
 .work-header {
-    padding: var(--space-3xl) 0 var(--space-2xl);
+    padding: var(--space-2xl) 0 var(--space-lg);
     text-align: center;
     background: var(--bg-primary);
 }
@@ -797,7 +820,7 @@ p {
 }
 
 .project-gallery {
-    padding: 80px 0;
+    padding: var(--space-2xl) 0;
 }
 
 .work-grid-extended {
@@ -858,7 +881,7 @@ p {
 }
 
 .work-process {
-    padding: 80px 0;
+    padding: 40px 0;
     background: var(--bg-secondary);
 }
 
@@ -945,7 +968,7 @@ p {
 }
 
 .skills {
-    padding: 80px 0;
+    padding: 40px 0;
     background: var(--bg-secondary);
 }
 
@@ -999,7 +1022,7 @@ p {
 }
 
 .education-experience {
-    padding: 80px 0;
+    padding: 40px 0;
 }
 
 .edu-exp-grid {
@@ -1060,7 +1083,7 @@ p {
 }
 
 .personal {
-    padding: 80px 0;
+    padding: 40px 0;
     background: var(--bg-secondary);
 }
 
@@ -1106,7 +1129,7 @@ p {
 
 /* Technologies Section */
 .technologies {
-    padding: 80px 0;
+    padding: 40px 0;
     background: var(--bg-primary);
 }
 
@@ -1205,7 +1228,7 @@ p {
 }
 
 .contact-section {
-    padding: 80px 0;
+    padding: 40px 0;
 }
 
 .contact-grid {
@@ -1335,7 +1358,7 @@ p {
 
 /* FAQ Styles */
 .faq {
-    padding: 80px 0;
+    padding: 40px 0;
     background: var(--bg-secondary);
 }
 
