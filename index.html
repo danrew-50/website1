@@ -11,18 +11,32 @@
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-brand">
-                <h2>JOHN DOE</h2>
+            <div class="nav-logo">
+                <h3>Portfolio</h3>
             </div>
-            <div class="nav-menu">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="work.html" class="nav-link">Work</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-                <button class="theme-toggle" aria-label="Toggle theme">
-                    <i class="fas fa-moon"></i>
-                    <span>Dark</span>
-                </button>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="work.html" class="nav-link">Work</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <button class="theme-toggle" id="theme-toggle">
+                        <i class="fas fa-moon" id="theme-icon"></i>
+                    </button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
     </nav>
@@ -34,45 +48,20 @@
                 <div class="hero-content">
                     <div class="hero-text">
                         <h1>Hi there! 👋</h1>
-                        <h2>I help passionate creative startup founders and influencers make a splash online – from design to launch.</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                        <p class="hero-subtitle">I help passionate creative startup founders and influencers make a splash online – from design to launch.</p>
                         <div class="hero-buttons">
-                            <a href="work.html" class="btn btn-primary">View My Work</a>
-                            <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+                            <a href="work.html" class="btn btn-primary">View top work</a>
                         </div>
-                    </div>
-                    <div class="hero-image">
-                        <img src="images/hero-portrait.jpg" alt="John Doe Portrait">
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Services Section -->
-        <section class="services">
+        <section class="services-section">
             <div class="container">
-                <h3>What I Do</h3>
-                <div class="services-grid">
-                    <div class="service-item">
-                        <i class="fas fa-palette"></i>
-                        <h4>Brand Design</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
-                    </div>
-                    <div class="service-item">
-                        <i class="fas fa-code"></i>
-                        <h4>Web Development</h4>
-                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-                    </div>
-                    <div class="service-item">
-                        <i class="fas fa-mobile-alt"></i>
-                        <h4>Mobile Apps</h4>
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
-                    </div>
-                    <div class="service-item">
-                        <i class="fas fa-chart-line"></i>
-                        <h4>Digital Marketing</h4>
-                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p>
-                    </div>
+                <div class="services-intro">
+                    <p class="text-large">Mockups & prototypes • Landing/marketing pages • Custom Laravel web apps • Logos & branding • E-commerce • Thread designs & posters • Company, investor slide decks • Accessibility compliance • Custom calligraphy (handwriting) • Traditional CMS (WordPress, Ghost) • JAMstack (Next.js/Hugo, Strapi) • Software themes (e.g. WHMCS) • Distributed Git workflow • Business consulting • Advertising & packaging • iOS + Android mobile apps</p>
                 </div>
             </div>
         </section>
@@ -80,32 +69,17 @@
         <!-- Featured Work Section -->
         <section class="featured-work">
             <div class="container">
-                <h3>Featured Projects</h3>
-                <div class="work-grid">
-                    <div class="work-item">
-                        <img src="images/project1.jpg" alt="Project 1">
-                        <div class="work-overlay">
-                            <h4>E-commerce Platform</h4>
-                            <p>Brand Design & Development</p>
+                <div class="work-showcase">
+                    <div class="work-images">
+                        <img src="images/project-main.svg" alt="Featured project showcase" class="main-project-image">
+                        <div class="work-gallery">
+                            <img src="images/project-mobile.svg" alt="Mobile view">
+                            <img src="images/project-detail.svg" alt="Project detail">
                         </div>
                     </div>
-                    <div class="work-item">
-                        <img src="images/project2.jpg" alt="Project 2">
-                        <div class="work-overlay">
-                            <h4>Mobile Banking App</h4>
-                            <p>UI/UX Design</p>
-                        </div>
+                    <div class="work-description">
+                        <p class="work-caption">Pictured above is the QParcel design project. <a href="work.html" class="btn-link">Click to view in full</a></p>
                     </div>
-                    <div class="work-item">
-                        <img src="images/project3.jpg" alt="Project 3">
-                        <div class="work-overlay">
-                            <h4>SaaS Dashboard</h4>
-                            <p>Web Development</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <a href="work.html" class="btn btn-outline">View All Projects</a>
                 </div>
             </div>
         </section>
@@ -137,29 +111,23 @@
         <!-- Testimonials Section -->
         <section class="testimonials">
             <div class="container">
-                <h3>What Clients Say</h3>
-                <div class="testimonial-grid">
-                    <div class="testimonial-item">
-                        <div class="testimonial-content">
-                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. John delivered exceptional results beyond our expectations."</p>
+                <h2>Hear what others say</h2>
+                <div class="testimonial-featured">
+                    <div class="testimonial-content">
+                        <div class="testimonial-avatars">
+                            <img src="images/client-avatar-1.svg" alt="Client">
+                            <img src="images/client-avatar-2.svg" alt="Client">
                         </div>
+                        <blockquote>
+                            <p>"I thoroughly enjoyed the work this portfolio owner has done for us in creating a small landing page for us. From the start, they were communicative and enthusiastic about getting the job done. I love working with passionate people - if you do too, make sure you reach out! Even though my requirements were quite abstract, they were able to deliver results - it's clear they've been doing this for a while with great success."</p>
+                        </blockquote>
                         <div class="testimonial-author">
-                            <img src="images/client1.jpg" alt="Client 1">
-                            <div>
-                                <h5>Sarah Johnson</h5>
-                                <span>CEO, TechStart Inc.</span>
+                            <div class="author-info">
+                                <h5>Parker J.</h5>
+                                <span>Quantitative Research & Development</span>
                             </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-content">
-                            <p>"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. The attention to detail and creativity was outstanding. Highly recommend working with John!"</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="images/client2.jpg" alt="Client 2">
-                            <div>
-                                <h5>Michael Chen</h5>
-                                <span>Founder, Digital Solutions</span>
+                            <div class="company-logo">
+                                <img src="images/company-logo.svg" alt="Turnover Capital">
                             </div>
                         </div>
                     </div>
@@ -167,32 +135,58 @@
             </div>
         </section>
 
+        <!-- About Section -->
+        <section class="about-preview">
+            <div class="container">
+                <div class="about-content">
+                    <h1>Hi there! 👋</h1>
+                    <p class="about-description">I am a European designer & web developer with 4+ years of professional experience with clients and open source work. I am currently open to new opportunities and work!</p>
+                    <a href="work.html" class="btn btn-primary">View select work</a>
+                </div>
+            </div>
+        </section>
+        
         <!-- CTA Section -->
-        <section class="cta">
+        <section class="cta-section">
             <div class="container">
                 <div class="cta-content">
-                    <h3>Ready to start your project?</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Let's bring your vision to life!</p>
-                    <a href="contact.html" class="btn btn-primary">Get Started Today</a>
+                    <h2>👋</h2>
+                    <h3>I am here to help.</h3>
+                    <p>By email, LinkedIn, or however you prefer.</p>
+                    <div class="cta-actions">
+                        <a href="contact.html" class="btn btn-primary">See contacts</a>
+                        <div class="signature">
+                            <img src="images/signature.svg" alt="Signature" class="signature-logo">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-left">
-                    <p>&copy; 2025 John Doe. All rights reserved.</p>
-                    <div class="footer-credits">
-                        <small>Built with <a href="#" class="credit-link">HTML5</a>, <a href="#" class="credit-link">CSS3</a>, <a href="#" class="credit-link">JavaScript</a> • Icons by <a href="https://fontawesome.com" class="credit-link" target="_blank">Font Awesome</a> • Fonts by <a href="https://fonts.google.com" class="credit-link" target="_blank">Google Fonts</a></small>
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <h3>PORTFOLIO</h3>
+                        <p>European designer & web developer</p>
+                    </div>
+                    <div class="footer-nav">
+                        <a href="work.html" class="footer-nav-link">Work</a>
+                        <a href="about.html" class="footer-nav-link">About</a>
+                        <a href="contact.html" class="footer-nav-link">Contact</a>
                     </div>
                 </div>
-                <div class="footer-right">
-                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-behance"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-dribbble"></i></a>
+                <div class="footer-bottom">
+                    <p>&copy; Portfolio Name, 2025. All rights reserved. You've reached the end of the page.</p>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Privacy Policy</a>
+                        <span class="footer-separator">/</span>
+                        <a href="contact.html" class="footer-link">Contact</a>
+                        <span class="footer-separator">/</span>
+                        <a href="work.html" class="footer-link">Portfolio</a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,0 +1,35 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="projectGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e8f0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#projectGradient1)"/>
+  
+  <!-- Browser window -->
+  <rect x="50" y="50" width="300" height="200" rx="8" fill="white" stroke="#e2e8f0" stroke-width="2"/>
+  
+  <!-- Browser bar -->
+  <rect x="50" y="50" width="300" height="30" rx="8" fill="#f1f5f9"/>
+  <circle cx="70" cy="65" r="4" fill="#ef4444"/>
+  <circle cx="85" cy="65" r="4" fill="#f59e0b"/>
+  <circle cx="100" cy="65" r="4" fill="#10b981"/>
+  
+  <!-- E-commerce content -->
+  <rect x="70" y="100" width="260" height="20" rx="4" fill="#0066ff" opacity="0.2"/>
+  <rect x="70" y="130" width="180" height="12" rx="6" fill="#64748b" opacity="0.3"/>
+  
+  <!-- Product grid -->
+  <rect x="70" y="160" width="60" height="60" rx="4" fill="#0066ff" opacity="0.1"/>
+  <rect x="140" y="160" width="60" height="60" rx="4" fill="#0066ff" opacity="0.1"/>
+  <rect x="210" y="160" width="60" height="60" rx="4" fill="#0066ff" opacity="0.1"/>
+  <rect x="280" y="160" width="50" height="60" rx="4" fill="#0066ff" opacity="0.1"/>
+  
+  <!-- Cart icon -->
+  <rect x="300" y="105" width="20" height="15" rx="2" fill="#0066ff"/>
+  <circle cx="305" cy="125" r="2" fill="#0066ff"/>
+  <circle cx="315" cy="125" r="2" fill="#0066ff"/>
+</svg>
