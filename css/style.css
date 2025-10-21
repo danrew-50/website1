@@ -202,9 +202,10 @@ p {
     font-size: 0.875rem;
 }
 
-/* Hero Section - Fullscreen */
+/* Hero Section - MNTS Style Kompakter */
 .hero {
-    height: 100vh;
+    padding: var(--space-2xl) 0 var(--space-xl);
+    min-height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
