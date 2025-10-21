@@ -1,36 +1,57 @@
-// Theme Toggle Functionality
-const themeToggle = document.querySelector('.theme-toggle');
-const themeIcon = document.querySelector('.theme-toggle i');
-const themeText = document.querySelector('.theme-toggle span');
-
-// Check for saved theme preference or default to 'light'
-const currentTheme = localStorage.getItem('theme') || 'light';
-document.documentElement.setAttribute('data-theme', currentTheme);
-
-// Update toggle button based on current theme
-function updateThemeToggle(theme) {
-    if (theme === 'dark') {
-        themeIcon.className = 'fas fa-sun';
-        themeText.textContent = 'Light';
-    } else {
-        themeIcon.className = 'fas fa-moon';
-        themeText.textContent = 'Dark';
-    }
-}
-
-// Initialize theme toggle
-if (themeToggle) {
-    updateThemeToggle(currentTheme);
+// Theme Toggle Functionality - Improved
+document.addEventListener('DOMContentLoaded', function() {
+    const themeToggle = document.querySelector('#theme-toggle');
+    const themeIcon = document.querySelector('#theme-icon');
     
-    themeToggle.addEventListener('click', function() {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        updateThemeToggle(newTheme);
+    // Check for saved theme preference or default to 'light'
+    const savedTheme = localStorage.getItem('theme');
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    const currentTheme = savedTheme || systemTheme;
+    
+    // Apply theme
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    updateThemeIcon(currentTheme);
+    
+    // Update icon based on current theme
+    function updateThemeIcon(theme) {
+        if (themeIcon) {
+            if (theme === 'dark') {
+                themeIcon.className = 'fas fa-sun';
+            } else {
+                themeIcon.className = 'fas fa-moon';
+            }
+        }
+    }
+    
+    // Theme toggle event listener
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            // Apply new theme
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+            
+            // Add smooth transition effect
+            document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
+            setTimeout(() => {
+                document.body.style.transition = '';
+            }, 300);
+        });
+    }
+    
+    // Listen for system theme changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+        if (!localStorage.getItem('theme')) {
+            const newTheme = e.matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            updateThemeIcon(newTheme);
+        }
     });
-}
+});
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -124,11 +145,34 @@ if (contactForm) {
     });
 }
 
-// Mobile menu toggle (placeholder for future implementation)
-function toggleMobileMenu() {
-    // Implementation for mobile menu toggle
-    console.log('Mobile menu toggle');
-}
+// Mobile menu toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+    }
+});
 
 // Parallax effect for hero section
 window.addEventListener('scroll', function() {

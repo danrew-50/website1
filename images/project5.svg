@@ -1,0 +1,50 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="portfolioGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e8f0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#portfolioGradient)"/>
+  
+  <!-- Laptop mockup -->
+  <rect x="80" y="60" width="240" height="150" rx="12" fill="#1a1a1a"/>
+  <rect x="90" y="75" width="220" height="125" rx="6" fill="white"/>
+  
+  <!-- Portfolio layout -->
+  <rect x="100" y="85" width="200" height="25" rx="4" fill="#0066ff" opacity="0.1"/>
+  <circle cx="115" cy="97" r="8" fill="#0066ff" opacity="0.3"/>
+  <rect x="130" y="93" width="60" height="8" rx="4" fill="#64748b" opacity="0.3"/>
+  <rect x="250" y="90" width="40" height="15" rx="7" fill="#0066ff"/>
+  
+  <!-- Project grid in portfolio -->
+  <rect x="100" y="120" width="60" height="40" rx="4" fill="#f8fafc" stroke="#e2e8f0"/>
+  <rect x="170" y="120" width="60" height="40" rx="4" fill="#f8fafc" stroke="#e2e8f0"/>
+  <rect x="240" y="120" width="50" height="40" rx="4" fill="#f8fafc" stroke="#e2e8f0"/>
+  
+  <!-- Project previews -->
+  <circle cx="130" cy="135" r="8" fill="#0066ff" opacity="0.2"/>
+  <circle cx="200" cy="135" r="8" fill="#10b981" opacity="0.2"/>
+  <circle cx="265" cy="135" r="8" fill="#f59e0b" opacity="0.2"/>
+  
+  <rect x="105" y="145" width="50" height="3" rx="1" fill="#64748b" opacity="0.3"/>
+  <rect x="175" y="145" width="50" height="3" rx="1" fill="#64748b" opacity="0.3"/>
+  <rect x="245" y="145" width="40" height="3" rx="1" fill="#64748b" opacity="0.3"/>
+  
+  <rect x="105" y="150" width="35" height="3" rx="1" fill="#64748b" opacity="0.2"/>
+  <rect x="175" y="150" width="40" height="3" rx="1" fill="#64748b" opacity="0.2"/>
+  <rect x="245" y="150" width="30" height="3" rx="1" fill="#64748b" opacity="0.2"/>
+  
+  <!-- Navigation dots -->
+  <circle cx="150" cy="180" r="3" fill="#0066ff"/>
+  <circle cx="165" cy="180" r="3" fill="#e2e8f0"/>
+  <circle cx="180" cy="180" r="3" fill="#e2e8f0"/>
+  <circle cx="195" cy="180" r="3" fill="#e2e8f0"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="50" cy="80" r="25" fill="#0066ff" opacity="0.1"/>
+  <circle cx="350" cy="200" r="30" fill="#0066ff" opacity="0.1"/>
+  <rect x="20" y="220" width="40" height="40" rx="8" fill="#0066ff" opacity="0.05"/>
+</svg>

@@ -11,28 +11,42 @@
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-brand">
-                <h2>JOHN DOE</h2>
+            <div class="nav-logo">
+                <h3>Portfolio</h3>
             </div>
-            <div class="nav-menu">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="work.html" class="nav-link">Work</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-                <button class="theme-toggle" aria-label="Toggle theme">
-                    <i class="fas fa-moon"></i>
-                    <span>Dark</span>
-                </button>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="work.html" class="nav-link active">Work</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <button class="theme-toggle" id="theme-toggle">
+                        <i class="fas fa-moon" id="theme-icon"></i>
+                    </button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
     </nav>
 
-    <main style="padding-top: 100px;">
+    <main class="main-content">
         <!-- Work Header -->
         <section class="work-header">
             <div class="container">
-                <h1>My Work</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Here's a collection of my recent projects and creative endeavors.</p>
+                <h1>Selected Work</h1>
+                <p class="work-intro">A curated collection of projects spanning web development, design, and digital experiences. Each project represents a unique challenge and creative solution.</p>
             </div>
         </section>
 
@@ -41,51 +55,51 @@
             <div class="container">
                 <div class="work-grid-extended">
                     <div class="work-item-detailed">
-                        <img src="images/project1.jpg" alt="E-commerce Platform">
+                        <img src="images/project1.svg" alt="E-commerce Platform">
                         <div class="work-info">
-                            <h3>E-commerce Platform</h3>
-                            <p>Brand Design & Development</p>
-                            <span class="work-category">Web Development</span>
+                            <h3>QCommerce</h3>
+                            <p>Modern e-commerce platform with seamless user experience</p>
+                            <span class="work-category">Web Development • UI/UX</span>
                         </div>
                     </div>
                     <div class="work-item-detailed">
-                        <img src="images/project2.jpg" alt="Mobile Banking App">
+                        <img src="images/project2.svg" alt="Mobile Banking App">
                         <div class="work-info">
-                            <h3>Mobile Banking App</h3>
-                            <p>UI/UX Design for modern banking solution</p>
-                            <span class="work-category">Mobile Design</span>
+                            <h3>FinanceFlow</h3>
+                            <p>Mobile-first banking application with focus on accessibility</p>
+                            <span class="work-category">Mobile Design • Fintech</span>
                         </div>
                     </div>
                     <div class="work-item-detailed">
-                        <img src="images/project3.jpg" alt="SaaS Dashboard">
+                        <img src="images/project3.svg" alt="SaaS Dashboard">
                         <div class="work-info">
-                            <h3>SaaS Dashboard</h3>
-                            <p>Complete dashboard redesign and development</p>
-                            <span class="work-category">Web Development</span>
+                            <h3>Analytics Pro</h3>
+                            <p>Data visualization dashboard for business intelligence</p>
+                            <span class="work-category">Dashboard Design • Data Viz</span>
                         </div>
                     </div>
                     <div class="work-item-detailed">
-                        <img src="images/project4.jpg" alt="Brand Identity">
+                        <img src="images/project4.svg" alt="Brand Identity">
                         <div class="work-info">
-                            <h3>Brand Identity Suite</h3>
-                            <p>Complete brand package for startup company</p>
-                            <span class="work-category">Branding</span>
+                            <h3>StartupBrand</h3>
+                            <p>Complete visual identity system for tech startup</p>
+                            <span class="work-category">Branding • Identity Design</span>
                         </div>
                     </div>
                     <div class="work-item-detailed">
-                        <img src="images/project5.jpg" alt="Portfolio Website">
+                        <img src="images/project5.svg" alt="Portfolio Website">
                         <div class="work-info">
-                            <h3>Portfolio Website</h3>
-                            <p>Custom portfolio design for creative professional</p>
-                            <span class="work-category">Web Design</span>
+                            <h3>CreativeSpace</h3>
+                            <p>Interactive portfolio website for digital artist</p>
+                            <span class="work-category">Web Design • Interactive</span>
                         </div>
                     </div>
                     <div class="work-item-detailed">
-                        <img src="images/project6.jpg" alt="Mobile App UI">
+                        <img src="images/project6.svg" alt="Mobile App UI">
                         <div class="work-info">
-                            <h3>Fitness App Interface</h3>
-                            <p>Modern UI design for health tracking app</p>
-                            <span class="work-category">Mobile Design</span>
+                            <h3>AppSuite</h3>
+                            <p>Cross-platform mobile application design system</p>
+                            <span class="work-category">Mobile UI • Cross-Platform</span>
                         </div>
                     </div>
                 </div>
@@ -133,20 +147,29 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-left">
-                    <p>&copy; 2025 John Doe. All rights reserved.</p>
-                    <div class="footer-credits">
-                        <small>Built with <a href="#" class="credit-link">HTML5</a>, <a href="#" class="credit-link">CSS3</a>, <a href="#" class="credit-link">JavaScript</a> • Icons by <a href="https://fontawesome.com" class="credit-link" target="_blank">Font Awesome</a> • Fonts by <a href="https://fonts.google.com" class="credit-link" target="_blank">Google Fonts</a></small>
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <h3>PORTFOLIO</h3>
+                        <p>European designer & web developer</p>
+                    </div>
+                    <div class="footer-nav">
+                        <a href="work.html" class="footer-nav-link">Work</a>
+                        <a href="about.html" class="footer-nav-link">About</a>
+                        <a href="contact.html" class="footer-nav-link">Contact</a>
                     </div>
                 </div>
-                <div class="footer-right">
-                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-behance"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-dribbble"></i></a>
+                <div class="footer-bottom">
+                    <p>&copy; Portfolio Name, 2025. All rights reserved. You've reached the end of the page.</p>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Privacy Policy</a>
+                        <span class="footer-separator">/</span>
+                        <a href="contact.html" class="footer-link">Contact</a>
+                        <span class="footer-separator">/</span>
+                        <a href="work.html" class="footer-link">Portfolio</a>
+                    </div>
                 </div>
             </div>
         </div>

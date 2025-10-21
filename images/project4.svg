@@ -1,0 +1,42 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8fafc"/>
+  
+  <!-- Brand elements -->
+  <circle cx="200" cy="100" r="40" fill="#0066ff" opacity="0.2"/>
+  <circle cx="200" cy="100" r="25" fill="#0066ff" opacity="0.4"/>
+  <circle cx="200" cy="100" r="12" fill="#0066ff"/>
+  
+  <!-- Logo variations -->
+  <rect x="80" y="160" width="60" height="30" rx="15" fill="#0066ff" opacity="0.1"/>
+  <text x="110" y="180" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#0066ff">BRAND</text>
+  
+  <rect x="170" y="160" width="60" height="30" rx="4" fill="white" stroke="#0066ff" stroke-width="2"/>
+  <text x="200" y="180" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#0066ff">BRAND</text>
+  
+  <rect x="260" y="160" width="60" height="30" rx="4" fill="#0066ff"/>
+  <text x="290" y="180" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="white">BRAND</text>
+  
+  <!-- Color palette -->
+  <circle cx="100" cy="220" r="15" fill="#0066ff"/>
+  <circle cx="130" cy="220" r="15" fill="#0052cc"/>
+  <circle cx="160" cy="220" r="15" fill="#f8fafc"/>
+  <circle cx="190" cy="220" r="15" fill="#64748b"/>
+  <circle cx="220" cy="220" r="15" fill="#1a1a1a"/>
+  
+  <!-- Typography samples -->
+  <rect x="250" y="210" width="120" height="40" rx="4" fill="white" stroke="#e2e8f0"/>
+  <text x="260" y="225" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#0066ff">Aa Bb Cc</text>
+  <text x="260" y="240" font-family="Inter, sans-serif" font-size="8" fill="#64748b">Typography</text>
+  
+  <!-- Business card mockup -->
+  <rect x="50" y="40" width="80" height="50" rx="4" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="70" cy="55" r="8" fill="#0066ff" opacity="0.3"/>
+  <rect x="85" y="50" width="35" height="4" rx="2" fill="#64748b" opacity="0.3"/>
+  <rect x="85" y="58" width="30" height="3" rx="1" fill="#64748b" opacity="0.2"/>
+  <rect x="85" y="65" width="25" height="3" rx="1" fill="#64748b" opacity="0.2"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="350" cy="50" r="20" fill="#0066ff" opacity="0.1"/>
+  <rect x="20" y="260" width="30" height="20" rx="10" fill="#0066ff" opacity="0.05"/>
+</svg>

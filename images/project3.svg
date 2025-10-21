@@ -1,0 +1,44 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8fafc"/>
+  
+  <!-- Dashboard layout -->
+  <rect x="30" y="30" width="340" height="240" rx="12" fill="white" stroke="#e2e8f0" stroke-width="2"/>
+  
+  <!-- Header -->
+  <rect x="30" y="30" width="340" height="40" rx="12" fill="#f1f5f9"/>
+  <circle cx="55" cy="50" r="8" fill="#0066ff" opacity="0.3"/>
+  <rect x="75" y="45" width="80" height="10" rx="5" fill="#64748b" opacity="0.4"/>
+  <rect x="300" y="45" width="50" height="10" rx="5" fill="#0066ff" opacity="0.3"/>
+  
+  <!-- Sidebar -->
+  <rect x="50" y="85" width="80" height="165" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+  <rect x="60" y="95" width="60" height="8" rx="4" fill="#64748b" opacity="0.3"/>
+  <rect x="60" y="110" width="50" height="8" rx="4" fill="#64748b" opacity="0.2"/>
+  <rect x="60" y="125" width="55" height="8" rx="4" fill="#0066ff" opacity="0.4"/>
+  <rect x="60" y="140" width="45" height="8" rx="4" fill="#64748b" opacity="0.2"/>
+  
+  <!-- Main content area -->
+  <rect x="150" y="85" width="200" height="80" rx="6" fill="#0066ff" opacity="0.1"/>
+  <rect x="160" y="95" width="100" height="15" rx="7" fill="#0066ff" opacity="0.3"/>
+  <rect x="160" y="120" width="80" height="10" rx="5" fill="#64748b" opacity="0.3"/>
+  <rect x="160" y="140" width="120" height="10" rx="5" fill="#64748b" opacity="0.2"/>
+  
+  <!-- Chart area -->
+  <rect x="150" y="180" width="200" height="70" rx="6" fill="white" stroke="#e2e8f0"/>
+  <polyline points="160,230 180,210 200,220 220,200 240,205 260,190 280,195 300,180 320,185 340,175" 
+            stroke="#0066ff" stroke-width="2" fill="none"/>
+  <circle cx="180" cy="210" r="3" fill="#0066ff"/>
+  <circle cx="220" cy="200" r="3" fill="#0066ff"/>
+  <circle cx="280" cy="195" r="3" fill="#0066ff"/>
+  <circle cx="320" cy="185" r="3" fill="#0066ff"/>
+  
+  <!-- Stats boxes -->
+  <rect x="280" y="95" width="60" height="30" rx="4" fill="white" stroke="#e2e8f0"/>
+  <rect x="285" y="100" width="25" height="8" rx="4" fill="#10b981" opacity="0.3"/>
+  <rect x="285" y="112" width="35" height="6" rx="3" fill="#64748b" opacity="0.2"/>
+  
+  <rect x="280" y="135" width="60" height="30" rx="4" fill="white" stroke="#e2e8f0"/>
+  <rect x="285" y="140" width="30" height="8" rx="4" fill="#ef4444" opacity="0.3"/>
+  <rect x="285" y="152" width="40" height="6" rx="3" fill="#64748b" opacity="0.2"/>
+</svg>
