@@ -1,24 +1,29 @@
+// Apply theme immediately to prevent flash
+(function() {
+    const savedTheme = localStorage.getItem('theme');
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    const currentTheme = savedTheme || systemTheme;
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    console.log('Applied theme on load:', currentTheme, 'from saved:', savedTheme);
+})();
+
 // Theme Toggle Functionality - Improved
 document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.querySelector('#theme-toggle');
     const themeIcon = document.querySelector('#theme-icon');
     
-    // Check for saved theme preference or default to 'light'
-    const savedTheme = localStorage.getItem('theme');
-    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    const currentTheme = savedTheme || systemTheme;
-    
-    // Apply theme
-    document.documentElement.setAttribute('data-theme', currentTheme);
+    // Get current theme that was already applied
+    const currentTheme = document.documentElement.getAttribute('data-theme');
     updateThemeIcon(currentTheme);
     
     // Update icon based on current theme
     function updateThemeIcon(theme) {
-        if (themeIcon) {
+        const icon = themeIcon || document.querySelector('#theme-icon');
+        if (icon) {
             if (theme === 'dark') {
-                themeIcon.className = 'fas fa-sun';
+                icon.className = 'fas fa-sun';
             } else {
-                themeIcon.className = 'fas fa-moon';
+                icon.className = 'fas fa-moon';
             }
         }
     }
@@ -34,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.documentElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
             updateThemeIcon(newTheme);
+            console.log('Theme changed to:', newTheme);
             
             // Add smooth transition effect
             document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
@@ -49,6 +55,14 @@ document.addEventListener('DOMContentLoaded', function() {
             const newTheme = e.matches ? 'dark' : 'light';
             document.documentElement.setAttribute('data-theme', newTheme);
             updateThemeIcon(newTheme);
+        }
+    });
+    
+    // Listen for theme changes in other tabs/windows
+    window.addEventListener('storage', function(e) {
+        if (e.key === 'theme' && e.newValue) {
+            document.documentElement.setAttribute('data-theme', e.newValue);
+            updateThemeIcon(e.newValue);
         }
     });
 });
@@ -210,4 +224,51 @@ document.addEventListener('DOMContentLoaded', function() {
             typeWriter(heroTitle, originalText, 100);
         }, 500);
     }
+});
+
+// Scroll Animation for Main Content
+document.addEventListener('DOMContentLoaded', function() {
+    const mainContent = document.querySelector('.main-content.animated');
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    
+    if (!mainContent) return;
+    
+    // Function to check if element is in viewport
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return rect.top < window.innerHeight && rect.bottom > 0;
+    }
+    
+    // Function to handle scroll animation
+    function handleScrollAnimation() {
+        const scrollY = window.scrollY;
+        const triggerPoint = window.innerHeight * 0.3; // Trigger when scrolled 30% of viewport
+        
+        if (scrollY > triggerPoint) {
+            mainContent.classList.add('visible');
+            // Hide scroll indicator once content is visible
+            if (scrollIndicator) {
+                scrollIndicator.style.opacity = '0';
+            }
+        }
+    }
+    
+    // Listen for scroll events
+    window.addEventListener('scroll', handleScrollAnimation);
+    
+    // Smooth scroll for scroll indicator click
+    if (scrollIndicator) {
+        scrollIndicator.addEventListener('click', function() {
+            window.scrollTo({
+                top: window.innerHeight,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Add cursor pointer to scroll indicator
+        scrollIndicator.style.cursor = 'pointer';
+    }
+    
+    // Initial check
+    handleScrollAnimation();
 });
