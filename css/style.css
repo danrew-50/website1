@@ -208,6 +208,9 @@ p {
     min-height: 70vh;
     display: flex;
     align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero-content {
@@ -244,6 +247,48 @@ p {
     gap: var(--space-md);
     justify-content: center;
     flex-wrap: wrap;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: bounce 2s infinite;
+}
+
+.scroll-arrow {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    font-weight: bold;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+/* Main Content Animation - only for index page */
+.main-content.animated {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-in-out;
+}
+
+.main-content.animated.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .hero-image {
@@ -643,6 +688,135 @@ p {
     flex-direction: column;
     align-items: center;
     gap: var(--space-lg);
+}
+
+/* Enhanced Work CTA Section */
+.work-cta {
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    border-top: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.work-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.work-cta .cta-content {
+    position: relative;
+    z-index: 2;
+}
+
+.work-cta .cta-icon {
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: var(--space-md);
+    animation: heartbeat 2s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { 
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% { 
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+.work-cta h3 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: var(--font-weight-bold);
+    background: linear-gradient(135deg, var(--text-primary), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: var(--space-md);
+}
+
+.work-cta p {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-xl);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.work-cta .cta-actions {
+    flex-direction: row;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.work-cta .cta-primary {
+    background: var(--accent-color);
+    color: white;
+    border: 2px solid var(--accent-color);
+    position: relative;
+    overflow: hidden;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
+.work-cta .cta-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.work-cta .cta-primary:hover::before {
+    left: 100%;
+}
+
+.work-cta .cta-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 102, 255, 0.3);
+}
+
+.work-cta .cta-secondary {
+    background: transparent;
+    color: var(--text-primary);
+    border: 2px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.work-cta .cta-secondary:hover {
+    background: var(--bg-secondary);
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* Mobile adjustments for work CTA */
+@media (max-width: 768px) {
+    .work-cta .cta-actions {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+    
+    .work-cta .cta-icon {
+        font-size: 2.5rem;
+    }
 }
 
 .signature {
@@ -1480,8 +1654,8 @@ p {
     }
     
     .hero {
-        padding: calc(var(--space-3xl) + 60px) 0 var(--space-2xl);
-        min-height: 80vh;
+        height: 100vh;
+        padding-top: 60px; /* Account for fixed nav on mobile */
     }
     
     .hero-content {
